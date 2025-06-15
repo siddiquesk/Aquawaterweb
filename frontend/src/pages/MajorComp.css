@@ -27,7 +27,7 @@
    Testimonial Top Section
 ---------------------------------- */
 .test-section {
-  background-image: url("/plants/pattern.png");
+  background-image: url("/plants/pattern.webp");
   background-color: var(--dark-blue);
   background-size: cover;
   background-repeat: no-repeat;
@@ -181,7 +181,7 @@
 
 .stats-section {
   background-color: rgb(4, 79, 92);
-  background-image: url("/plants/pattern.png");
+  background-image: url("/plants/pattern.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

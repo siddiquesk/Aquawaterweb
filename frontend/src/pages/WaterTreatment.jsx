@@ -14,35 +14,35 @@ function WaterTreatment() {
         <div className="treatment-card-container">
           <article className="water-treatment-card treatment-card">
             <figure>
-              <img src="./plants/world1.png" alt="Service center icon" />
+              <img src="./plants/world1.webp" alt="Service center icon" />
               <figcaption>Service center in all over the world</figcaption>
             </figure>
           </article>
 
           <article className="water-treatment-card">
             <figure>
-              <img src="./plants/world2.png" alt="Registered brand icon" />
+              <img src="./plants/world2.webp" alt="Registered brand icon" />
               <figcaption>Registered Brands</figcaption>
             </figure>
           </article>
 
           <article className="water-treatment-card">
             <figure>
-              <img src="./plants/world3.png" alt="Customer support icon" />
+              <img src="./plants/world3.webp" alt="Customer support icon" />
               <figcaption>Happy customer world wide</figcaption>
             </figure>
           </article>
 
           <article className="water-treatment-card">
             <figure>
-              <img src="./plants/world4.png" alt="Manufacturing icon" />
+              <img src="./plants/world4.webp" alt="Manufacturing icon" />
               <figcaption>Own manufacturing in the world</figcaption>
             </figure>
           </article>
 
           <article className="water-treatment-card">
             <figure>
-              <img src="./plants/world5.png" alt="Waste treatment icon" />
+              <img src="./plants/world5.webp" alt="Waste treatment icon" />
               <figcaption>Waste Water treatment Solution Under One Roof</figcaption>
             </figure>
           </article>

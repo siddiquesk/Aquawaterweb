@@ -12,16 +12,16 @@ function AboutCertificate() {
           </p>
         </div>
         <div className="about-certificate-image">
-          <img src="./images/cetificate.jpg" alt="certificate" />
+          <img src="./images/cetificate.webp" alt="certificate" />
         </div>
       </section>
       {/*our certificate */}
       <section className='our-certificate'>
         <h1>Our Certificate</h1>
         <div className="three-certificate-image">
-          <img src="./images/s1.jpg" alt="certificate1" />
-          <img src="./images/s2.jpg" alt="certificate2" />
-          <img src="./images/s3.jpg" alt="certificate3" />
+          <img src="./images/s1.webp" alt="certificate1" />
+          <img src="./images/s2.webp" alt="certificate2" />
+          <img src="./images/s3.webp" alt="certificate3" />
         </div>
       </section>
     </>

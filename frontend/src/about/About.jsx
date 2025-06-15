@@ -9,7 +9,7 @@ function About() {
       {/* ========== Banner Image Section ========== */}
       <div className="common-page-element">
         <div className="first-common-image">
-          <img src="./images/about.jpg" alt="about" />
+          <img src="./images/about.webp" alt="about" />
         </div>
       </div>
 

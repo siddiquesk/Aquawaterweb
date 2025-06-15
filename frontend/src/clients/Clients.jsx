@@ -18,7 +18,7 @@ function Clients() {
       <div className="common-page-element">
         {/* Desktop Banner Image */}
         <div className="first-common-image">
-          <img src="./images/clients.jpg" alt="clients" />
+          <img src="./images/clients.webp" alt="clients" />
         </div>
 
         {/* Mobile Banner Fallback Text */}

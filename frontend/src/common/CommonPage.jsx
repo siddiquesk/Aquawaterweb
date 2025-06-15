@@ -5,7 +5,7 @@ function CommonPage() {
     <>
       <div className='common-page-element'>
         <div className="first-common-image">
-          <img src="./images/faq.jpg" alt="clients" />
+          <img src="./images/faq.webp" alt="clients" />
         </div>
       </div>
     </>

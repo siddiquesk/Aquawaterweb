@@ -7,7 +7,7 @@ function Contact() {
       {/* Top Banner Image Section */}
       <section className='common-page-element'>
         <figure className="first-common-image">
-          <img src="./images/contact.jpg" alt="Contact Banner" />
+          <img src="./images/contact.webp" alt="Contact Banner" />
         </figure>
       </section>
 
