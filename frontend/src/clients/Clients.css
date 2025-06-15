@@ -1,0 +1,132 @@
+.clients-para {
+  width: 100%;
+  max-width: 1300px;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.clients-para p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clients-para {
+    padding: 2rem;
+    border-radius: 0.8rem;
+    margin-top: -5rem; /* or try -3rem if needed */
+  }
+
+  .clients-para p {
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+}
+
+/* Already existing */
+.common-page-element {
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.first-common-image {
+  width: 100%;
+  height: 100%;
+}
+
+.first-common-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile Replacement Banner (NEW) */
+.mobile-clients-fallback {
+  display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .first-common-image {
+    display: none;
+  }
+
+  .mobile-clients-fallback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .mobile-clients-fallback h2 {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-clients-fallback p {
+    font-size: 1.3rem;
+    color: #333;
+  }
+}
+
+/*logo cards*/
+:root {
+  --gray: #f0f0f0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Container */
+.logo-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4rem;
+  padding: 2rem 4rem;
+}
+
+/* Logo Card */
+.logo-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px var(--shadow);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.logo-card:hover {
+  background-color: var(--gray);
+}
+
+/* Image Styling */
+.logo-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+}

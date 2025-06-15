@@ -1,0 +1,123 @@
+.water-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #d0f2ff;
+  padding: 1.5rem 3rem;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 123, 255, 0.15);
+  gap: 1.5rem;
+}
+
+.contact-group {
+  display: flex;
+  gap: 2rem;
+  flex: 1 1 60%;
+  flex-wrap: wrap;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  color: var(--dark);
+  white-space: nowrap;
+}
+.contact-box-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #d60606;
+}
+
+.contact-text {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.email-box,
+.language-box {
+  flex: 0 0 18rem;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.language-select {
+  appearance: none;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  border: 1px solid #00bcd4;
+  border-radius: 0.4rem;
+  background-color: #e9faff;
+  color: #004e64;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.language-select option {
+  font-size: 1.6rem;
+  color: #004e64;
+  background-color: #ffffff;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.6rem;
+  color: #007b9f;
+}
+
+/* ✅ Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .water-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background-color: var(--yellow) !important; /* orange background */
+  }
+
+  .right-group,
+  .email-box,
+  .language-box,
+  .select-wrapper {
+    display: none !important;
+  }
+
+  .contact-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .contact-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .contact-box-2 {
+    display: none;
+  }
+}

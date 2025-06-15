@@ -1,0 +1,201 @@
+:root {
+  --orange: #ff7a00;
+  --dark-blue: #021024;
+  --light: #f4f4f4;
+  --text-dark: #1e1e1e;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- COMMON BANNER SECTION ---------- */
+.common-page-element {
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.first-common-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.first-common-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile fallback banner hidden by default */
+.mobile-fallback-banner {
+  display: none;
+}
+
+/* ---------- FAQ CONTENT TOP HEADING SECTION ---------- */
+.helping-faq-content {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.helping-faq-content .faq-icon1 {
+  font-size: 8rem;
+  font-weight: 600;
+  margin-block: 1rem;
+}
+
+.helping-faq-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.6rem;
+  color: var(--orange);
+}
+
+.helping-faq-content p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- FAQ QUESTION BLOCKS ---------- */
+.from-water-faq {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 2rem 0 3.8rem 0;
+}
+
+.faq-water-supply {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 2rem;
+  width: 50rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-water-supply h1 {
+  font-size: 1.7rem;
+  color: #333;
+  margin: 0;
+}
+
+.faq-water-supply span {
+  background-color: orange;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  min-width: 3rem;
+  height: 3rem;
+}
+
+/* ---------- TOGGLE ACTIVE STYLING ---------- */
+.faq-water-supply.active-faq {
+  background-color: var(--dark);
+  color: white;
+}
+
+.faq-water-supply.active-faq h1 {
+  color: white;
+}
+
+.faq-water-supply.active-faq span {
+  background-color: white;
+  color: #007bff;
+}
+
+.faq-water-supply p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ---------- RESPONSIVE STYLING FOR MOBILE ---------- */
+@media (max-width: 768px) {
+  .first-common-image {
+    display: none;
+  }
+
+  .mobile-fallback-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .mobile-fallback-banner h1 {
+    font-size: 2rem;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+
+  .mobile-fallback-banner p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .common-page-element {
+    height: auto;
+  }
+
+  .faq-water-supply {
+    width: 100%;
+    padding: 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faq-water-supply h1 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .faq-water-supply span {
+    font-size: 1rem;
+    padding: 0.4rem;
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+
+  .helping-faq-content h1 {
+    font-size: 2rem;
+  }
+
+  .helping-faq-content p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .helping-faq-content .faq-icon1 {
+    font-size: 5rem;
+  }
+
+  .from-water-faq {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
+
+  .faq-water-supply p {
+    font-size: 1.2rem;
+    color: white;
+  }
+}

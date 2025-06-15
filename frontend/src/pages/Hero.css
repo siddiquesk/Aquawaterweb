@@ -1,0 +1,197 @@
+/* Main Hero Section */
+.main-hero {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+/* Inner Section */
+.main-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image with fade transition */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+/* When loaded */
+.image-container img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Overlay */
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay); /* example: rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+}
+
+/* Hover Zones */
+.hover-zone {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  z-index: 5;
+}
+
+.hover-zone.left {
+  left: 0;
+}
+
+.hover-zone.right {
+  right: 0;
+}
+
+/* Content on Image */
+.image-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 10;
+  max-width: 40rem;
+  color: var(--white);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When image is loaded, fade in content */
+.image-container img.loaded + .hover-zone + .hover-zone + .image-content {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+/* Heading and Paragraph */
+.image-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-top: 2rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.image-content p {
+  font-size: 1.6rem;
+  color: black;
+  margin-top: 1rem;
+  line-height: 1.4;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+  padding: 1rem 1.4rem;
+  background-color: maroon;
+  color: aliceblue;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.arrow:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.left-arrow {
+  left: 1rem;
+}
+
+.right-arrow {
+  right: 1rem;
+}
+
+/* Bottom Strip Section */
+.small-section {
+  width: 100%;
+  height: 1.6rem;
+  background-color: pink;
+  opacity: 0.8;
+}
+
+/* Responsive Tap Target */
+@media (max-width: 768px) {
+  .arrow {
+    font-size: 2.6rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+  }
+
+  .main-hero {
+    height: 40rem;
+  }
+
+  .image-content {
+    top: 60%;
+    left: 5%;
+    transform: translateY(-50%);
+    padding: 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .image-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Description */
+  .image-content p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0.5rem;
+  }
+
+  .arrow {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+}
+
+/* Optional visual debug (remove in production) */
+/*
+.hover-zone.left { background: rgba(255, 0, 0, 0.1); }
+.hover-zone.right { background: rgba(0, 0, 255, 0.1); }
+*/

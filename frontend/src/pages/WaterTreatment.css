@@ -1,0 +1,91 @@
+.water-treatment-company {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+  height: 60rem;
+}
+
+.water-treatment-heading h1 {
+  font-size: 3rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.water-treatment-heading h2 {
+  font-size: 1.9rem;
+  color: var(--cyan);
+  margin-bottom: 4rem;
+  font-weight: 500;
+}
+
+.treatment-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Individual card styling */
+.water-treatment-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: floatCard 3s ease-in-out infinite;
+}
+.water-treatment-card figcaption {
+  color: var(--indigo);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.water-treatment-card figcaption:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.water-treatment-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Floating animation */
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn-connect {
+  margin-top: 3rem;
+}
+
+.btn-connect button {
+  background-color: var(--danger);
+  color: white;
+  padding: 1.5rem 2.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-connect button:hover {
+  background-color: #005f8a;
+}

@@ -1,0 +1,139 @@
+.about-water-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  height: 75rem;
+  gap: 4rem;
+}
+
+.about-aqua {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-aqua-image {
+  width: 90%;
+  max-width: 500px;
+  margin-left: 5rem;
+  min-height: 500px;
+  height: 70vh;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.about-aqua-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+.about-aqua-image img:hover {
+  transform: scale(1.03);
+  opacity: 0.92;
+}
+
+/* About Text Section */
+.about-aqua-container {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-company {
+  max-width: 600px;
+  color: #555555;
+  margin-right: 3rem;
+}
+
+.about-company h1 {
+  font-size: 2rem; /* 28px */
+  color: var(--primary, #007bff);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-company h2 {
+  font-size: 2rem; /* 20px */
+  color: #222;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about-company p {
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.about-aqua-para {
+  font-size: 1.6rem; /* 16px */
+  color: #444;
+  background-color: #e7f2ff;
+  padding: 1.2rem 1.8rem;
+  border-left: 5px solid var(--primary, #007bff);
+  border-radius: 6px;
+  margin-top: 2rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .about-water-section {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 2rem;
+    gap: 3rem;
+  }
+
+  .about-aqua-container {
+    order: 1;
+    flex: unset;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .about-company {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .about-company h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-company h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-company p,
+  .about-aqua-para {
+    font-size: 1.4rem;
+  }
+
+  .about-aqua {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-aqua-image {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-left: 0;
+  }
+
+  .about-aqua-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
