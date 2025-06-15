@@ -1,4 +1,4 @@
-/* ========== Common About Image Section ========== */
+/* ========== Common Banner Image Section ========== */
 .first-common-image {
   position: relative;
   width: 100%;
@@ -13,7 +13,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== Mobile Fallback Text if Image Hidden ========== */
+/* ========== Mobile Fallback Text When Image is Hidden ========== */
 .about-image-text-fallback {
   display: none;
   background-color: #e8f4ff;
@@ -73,6 +73,7 @@
   margin-right: auto;
 }
 
+/* Strength Points with Tick Icon */
 .strengths-content {
   display: flex;
   flex-direction: column;
@@ -82,12 +83,11 @@
 .strengths-content p {
   font-size: 1.2rem;
   line-height: 1.8;
-  padding-left: 2.2rem;
-  position: relative;
   background-color: #fff;
   padding: 1rem 1.5rem 1rem 2.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  position: relative;
   transition: transform 0.3s;
 }
 
@@ -105,8 +105,77 @@
   font-size: 1.2rem;
 }
 
-/* ========== Responsive Media Query ========== */
+/* ========== Certificate Section ========== */
+.about-certificate {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.about-certification-para,
+.about-certificate-image {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.about-certification-para p {
+  font-size: 1.4rem;
+  line-height: 1.9;
+  color: #1e1e1e;
+  text-align: justify;
+  max-width: 95%;
+}
+
+.about-certificate-image {
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.about-certificate-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ========== Certificate Heading & Multiple Images ========== */
+.our-certificate {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.our-certificate h1 {
+  color: gray;
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 2rem;
+}
+
+.three-certificate-image {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.three-certificate-image img {
+  width: 100%;
+  max-width: 300px;
+  flex: 1 1 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========== Responsive Styling (Mobile View) ========== */
 @media (max-width: 768px) {
+  /* Hide image on small devices and show fallback text */
   .first-common-image img {
     display: none;
   }
@@ -114,13 +183,16 @@
   .first-common-image {
     margin-bottom: 0;
   }
+
   .common-page-element {
     display: none;
   }
+
   .about-image-text-fallback {
     display: block;
   }
 
+  /* Adjust about strengths section */
   .about-strengths {
     padding: 3rem 1rem;
   }
@@ -141,5 +213,38 @@
   .strengths-content p::before {
     top: 1rem;
     left: 0.8rem;
+  }
+
+  /* Stack certificate content vertically */
+  .about-certificate {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .about-certification-para,
+  .about-certificate-image {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .about-certification-para {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-certificate-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* Certificate images stacked */
+  .three-certificate-image {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .three-certificate-image img {
+    max-width: 90%;
   }
 }

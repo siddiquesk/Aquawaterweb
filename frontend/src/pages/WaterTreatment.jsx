@@ -1,7 +1,8 @@
 import React from 'react'
 import "./WaterTreatment.css"
-
+import { NavLink } from "react-router-dom"
 function WaterTreatment() {
+
   return (
     <>
       <section className="water-treatment-company container">
@@ -48,7 +49,7 @@ function WaterTreatment() {
         </div>
 
         <footer className="btn-connect">
-          <button>Connect With us</button>
+          <NavLink to="/contact"><button>Connect With us</button></NavLink>
         </footer>
       </section>
     </>

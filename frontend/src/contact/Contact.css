@@ -1,0 +1,203 @@
+/* ======= CONTACT SECTION WITH HEADING + GOOGLE MAP ======= */
+.contact-section-first {
+  width: 100%;
+  background-color: var(--contact); /* Custom background color variable */
+  padding: 6rem 2rem 5rem;
+  text-align: center;
+}
+
+.contact-section-first h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.contact-section-first p {
+  font-size: 1.5rem;
+  color: #fff;
+  max-width: 80rem;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* === Embedded Google Map === */
+.contact-section-first iframe {
+  width: 100%;
+  height: 45rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= RESPONSIVE FOR MOBILE (Under 768px) ======= */
+@media (max-width: 768px) {
+  .first-common-image {
+    display: none;
+  }
+
+  .contact-section-first {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .contact-section-first h1 {
+    font-size: 2.4rem;
+  }
+
+  .contact-section-first p {
+    font-size: 1.2rem;
+  }
+
+  .contact-section-first iframe {
+    height: 35rem;
+  }
+}
+
+/* ======= ENQUIRE FORM WRAPPER (LEFT + RIGHT BOX) ======= */
+.contact-enquire-wrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+  font-family: "Segoe UI", sans-serif;
+  flex-wrap: wrap; /* Wraps on small screen */
+}
+
+/* ======= LEFT BOX: CONTACT INFO ======= */
+.contact-enquire-left {
+  flex: 1 1 50%;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-enquire-left h1 {
+  font-size: 3rem;
+  color: #1e1e1e;
+  margin-bottom: 2rem;
+}
+
+.contact-enquire-left h2 {
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 0.8rem;
+}
+
+.contact-enquire-left h3 {
+  font-size: 1.6rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.water-card-free {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 1rem;
+  margin: 0.5rem auto;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  max-width: 80%;
+}
+
+/* ======= RIGHT BOX: ENQUIRY FORM ======= */
+.contact-enquire-right {
+  flex: 1 1 50%;
+  background-color: #fff;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ======= FORM STYLING ======= */
+.enquiry-form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.form-full textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  resize: none;
+  margin-bottom: 2rem;
+}
+
+.enquiry-form button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.6rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enquiry-form button:hover {
+  background-color: #005fa3;
+}
+
+/* ======= FORM RESPONSIVE FOR MOBILE ======= */
+@media (max-width: 768px) {
+  .contact-enquire-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-enquire-left,
+  .contact-enquire-right {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+
+  .water-card-free {
+    font-size: 1.2rem;
+  }
+
+  .enquiry-form button {
+    width: 100%;
+  }
+
+  .contact-enquire-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-enquire-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-enquire-left h3 {
+    font-size: 1.4rem;
+  }
+}

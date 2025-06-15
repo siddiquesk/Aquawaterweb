@@ -8,6 +8,8 @@ import Footer from "./footer/Footer"
 import Faq from './faq/Faq'
 import Clients from './clients/Clients'
 import About from './about/About'
+import Blog from './blog/Blog'
+import Contact from './contact/Contact'
 function App() {
   return (
     <>
@@ -20,6 +22,8 @@ function App() {
         <Route path='/faq' element={<Faq />} />
         <Route path='/clients' element={<Clients />} />
         <Route path='/about' element={<About />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </>

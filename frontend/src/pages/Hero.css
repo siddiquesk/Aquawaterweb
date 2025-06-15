@@ -117,11 +117,10 @@
   transform: translateY(-50%);
   font-size: 2.4rem;
   padding: 1rem 1.4rem;
-  background-color: maroon;
+  background-color: #f7374f;
   color: aliceblue;
   cursor: pointer;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease;
   backdrop-filter: blur(3px);
 }
