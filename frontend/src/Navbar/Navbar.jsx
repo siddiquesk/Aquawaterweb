@@ -4,29 +4,25 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
 function Navbar() {
-  // Mobile drawer open/close
   const [isOpen, setIsOpen] = useState(false);
-
-  // Mobile submenu toggles
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showProductMenu, setShowProductMenu] = useState(false);
 
   return (
     <>
       <header>
-        {/* ---------- Top Navbar ---------- */}
         <nav className="navbar">
           {/* Logo */}
           <div className="logo">
             <img src="/images/logo4.jpg" alt="Aqua Logo" />
           </div>
 
-          {/* Hamburger Icon (for mobile) */}
+          {/* Hamburger Icon */}
           <div className="menu-icon" onClick={() => setIsOpen(true)}>
             <FaBars />
           </div>
 
-          {/* ---------- Desktop Nav Links ---------- */}
+          {/* Desktop Nav Links */}
           <ul className="nav-links desktop-only">
             <li><Link to="/">Home</Link></li>
 
@@ -34,8 +30,26 @@ function Navbar() {
             <li className="dropdown">
               <span>Company Profile ▾</span>
               <ul className="dropdown-menu">
-                <li><Link to="/download-profile">Download Profile</Link></li>
-                <li><Link to="/download-catalogue">Download Catalogue</Link></li>
+                <li>
+                  <a
+                    href="https://3daqua.in/images/3d-aqua-water-treatment-company-profile-india.pdf"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Profile
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://3daqua.in/new-image/3D-AQUA-CATALOG.pdf"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Catalogue
+                  </a>
+                </li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/vision-mission">Vision Mission</Link></li>
                 <li><Link to="/career">Career</Link></li>
@@ -64,7 +78,7 @@ function Navbar() {
             <li><Link to="/blog">Blog</Link></li>
           </ul>
 
-          {/* ---------- Desktop Right-Side Buttons ---------- */}
+          {/* Desktop Actions */}
           <div className="nav-actions desktop-only">
             <h4>PayHere</h4>
             <h4>3dAquaStore</h4>
@@ -73,35 +87,50 @@ function Navbar() {
         </nav>
       </header>
 
-      {/* ---------- Overlay (behind mobile drawer) ---------- */}
+      {/* Overlay */}
       {isOpen && <div className="overlay" onClick={() => setIsOpen(false)}></div>}
 
+      {/* Mobile Drawer */}
       <aside className={`drawer ${isOpen ? "open" : ""}`}>
-        {/* Drawer Top Section */}
         <div className="drawer-header">
           <img src="/images/logo4.jpg" alt="Logo" />
           <FaTimes className="close-icon" onClick={() => setIsOpen(false)} />
         </div>
 
-        {/* Mobile Nav Links */}
         <ul className="drawer-links">
           <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
 
-          {/* Toggle Company Profile Submenu */}
+          {/* Profile Submenu */}
           <li onClick={() => setShowProfileMenu(!showProfileMenu)}>
             Company Profile ▾
           </li>
           {showProfileMenu && (
             <ul className="submenu">
-              <li><Link to="/download-profile" onClick={() => setIsOpen(false)}>Download Profile</Link></li>
-              <li><Link to="/download-catalogue" onClick={() => setIsOpen(false)}>Download Catalogue</Link></li>
+              <li>
+                <a
+                  href="https://3daqua.in/images/3d-aqua-water-treatment-company-profile-india.pdf"
+                  download
+                  onClick={() => setIsOpen(false)}
+                >
+                  Download Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/downloads/3daqua-catalogue.pdf"
+                  download
+                  onClick={() => setIsOpen(false)}
+                >
+                  Download Catalogue
+                </a>
+              </li>
               <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
               <li><Link to="/vision-mission" onClick={() => setIsOpen(false)}>Vision Mission</Link></li>
               <li><Link to="/career" onClick={() => setIsOpen(false)}>Career</Link></li>
             </ul>
           )}
 
-          {/* Toggle Products Submenu */}
+          {/* Products Submenu */}
           <li onClick={() => setShowProductMenu(!showProductMenu)}>
             Products ▾
           </li>
@@ -123,12 +152,12 @@ function Navbar() {
           <li><Link to="/contact" onClick={() => setIsOpen(false)} className="nav-contact">Let's Talk</Link></li>
         </ul>
       </aside>
-
     </>
   );
 }
 
 export default Navbar;
+
 
 
 

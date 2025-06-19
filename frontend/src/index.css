@@ -46,6 +46,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.static-icons {
+  position: fixed;
+  right: 0.1rem;
+  top: 55%;
+  transform: translateY(-50%);
+  z-index: 999;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 h1,
 h2,
 h3,

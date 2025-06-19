@@ -1,0 +1,307 @@
+:root {
+  --blue-primary: #0077b6;
+  --blue-light: #caf0f8;
+  --blue-dark: #023e8a;
+  --gray-soft: #f1f1f1;
+  --gray-border: #ccc;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --text-dark: #333333;
+}
+
+.career-section {
+  width: 100%;
+  background-color: var(--gray-soft);
+  :root {
+    --blue-primary: #0077b6;
+    --blue-light: #e0f7fa;
+    --blue-dark: #023e8a;
+    --gray-soft: rgba(0, 0, 0, 0.03);
+    --gray-border: #ccc;
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --text-dark: #333333;
+  }
+
+  .career-section {
+    width: 100%;
+    background-color: var(--gray-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+  }
+
+  .career-about-section {
+    width: 48%;
+    background-color: var(--gray-soft);
+    padding: 2.5rem;
+    border-radius: 0.8rem;
+    color: var(--black);
+  }
+
+  .welcome-career {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--blue-primary);
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .welcome-career span {
+    color: rgb(10, 187, 48);
+  }
+
+  .career-h1-div h1 {
+    font-size: 4rem;
+    line-height: 1.4;
+    color: var(--blue-dark);
+    margin-bottom: 2rem;
+  }
+
+  .career-about-section p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 1.6rem;
+    color: var(--text-dark);
+  }
+
+  .career-form-div {
+    width: 48%;
+    background-color: var(--cyan); /* Light Aqua Background */
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--black);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ---------- Form Styles ---------- */
+  .enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .form-row input,
+  textarea,
+  input[type="file"] {
+    flex: 1;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: var(--black);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--blue-dark);
+    font-size: 1.3rem;
+  }
+
+  .form-full {
+    width: 100%;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button[type="submit"] {
+    background-color: var(--blue-dark);
+    color: var(--white);
+    padding: 1.3rem 1.5rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(2, 62, 138, 0.2);
+  }
+
+  button[type="submit"]:hover {
+    background-color: var(--blue-primary);
+  }
+
+  /* ---------- Responsive Design ---------- */
+  @media (max-width: 768px) {
+    .career-section {
+      flex-direction: column;
+      padding: 2rem 1rem;
+    }
+
+    .career-about-section,
+    .career-form-div {
+      width: 100%;
+    }
+
+    .career-h1-div h1 {
+      font-size: 2.4rem;
+    }
+
+    .career-about-section p {
+      font-size: 1.3rem;
+    }
+
+    .form-row {
+      flex-direction: column;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+    }
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+}
+
+.career-about-section {
+  width: 48%;
+  background-color: var(--gray-soft);
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  color: var(--black);
+}
+
+.welcome-career {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue-primary);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.welcome-career span {
+  color: rgb(10, 187, 48);
+}
+
+.career-h1-div h1 {
+  font-size: 4rem;
+  line-height: 1.4;
+  color: var(--blue-dark);
+  margin-bottom: 2rem;
+}
+
+.career-about-section p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+  color: var(--text-dark);
+}
+
+.career-form-div {
+  width: 48%;
+  background-color: var(--contact);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  color: var(--black);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Form Styles ---------- */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+textarea,
+input[type="file"] {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  color: var(--black);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--blue-dark);
+  font-size: 1.3rem;
+}
+
+.form-full {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: var(--blue-dark);
+  color: var(--white);
+  padding: 1.3rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(2, 62, 138, 0.2);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--blue-primary);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+  .career-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .career-about-section,
+  .career-form-div {
+    width: 100%;
+  }
+
+  .career-h1-div h1 {
+    font-size: 2.4rem;
+  }
+
+  .career-about-section p {
+    font-size: 1.3rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
