@@ -68,7 +68,7 @@ function Navbar() {
                 <li><Link to="/fire-fighting">Fire Fighting System</Link></li>
                 <li><Link to="/fabrication-job-work">Fabrication & Job Work</Link></li>
                 <li>
-                  <Link to="/fabrication-job-work" className="nav-red-btn">More Products</Link>
+                  <Link to="/more-products" className="nav-red-btn">More Products</Link>
                 </li>
               </ul>
             </li>

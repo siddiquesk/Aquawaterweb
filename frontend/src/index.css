@@ -48,7 +48,7 @@ html {
 
 .static-icons {
   position: fixed;
-  right: 0.1rem;
+  right: 0.5rem;
   top: 55%;
   transform: translateY(-50%);
   z-index: 999;
@@ -56,6 +56,17 @@ html {
   transition: background-color 0.3s ease;
 }
 
+@media (max-width: 600) {
+  .static-icons {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
 h1,
 h2,
 h3,

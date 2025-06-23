@@ -13,6 +13,14 @@ import Contact from './contact/Contact'
 import Vision from './visionmission/Vision'
 import Career from "./career/Career"
 import Icon from "./icons/Icon"
+import Sewage from './product/Sewage'
+import Effluent from './effluent/Effluent'
+import Domestic from './effluent/Domestic'
+import ReverseOsmosis from './effluent/ReverseOsmosis'
+import UltraFiltration from './effluent/UltraFiltration'
+import Fabrication from './effluent/Fabrication'
+import FireFighting from './effluent/FireFighting'
+import MoreProduct from './moreproduct/MoreProduct'
 function App() {
   return (
     <>
@@ -32,6 +40,14 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/vision-mission' element={<Vision />} />
         <Route path='/career' element={<Career />} />
+        <Route path='/sewage-treatment-plant' element={<Sewage />} />
+        <Route path='/effluent-treatment-plant' element={<Effluent />} />
+        <Route path='/domestic-water-softener' element={<Domestic />} />
+        <Route path='/commercial-ro-plant' element={<ReverseOsmosis />} />
+        <Route path='/ultra-filtration' element={<UltraFiltration />} />
+        <Route path='/fabrication-job-work' element={<Fabrication />} />
+        <Route path='/fire-fighting' element={<FireFighting />} />
+        <Route path='/more-products' element={<MoreProduct />} />
       </Routes>
       <Footer />
     </>

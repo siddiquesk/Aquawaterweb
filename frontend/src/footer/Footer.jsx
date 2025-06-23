@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaArrowRight } from 'react-icon
 import { MdOutlineFactory } from "react-icons/md";
 import { IoMdBusiness } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-
+import { Link } from "react-router-dom"
 function Footer() {
   return (
     <footer className="footer">
@@ -61,11 +61,11 @@ function Footer() {
           <div className="footer-section icons-h2">
             <h4>Follow Us</h4>
             <div className="social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer"><FaYoutube /></a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+              <Link to="https://www.facebook.com/3daquaindia/" target="_blank" rel="noreferrer"><FaFacebookF /></Link>
+              <Link to="https://www.instagram.com/3daquaindia/" target="_blank" rel="noreferrer"><FaInstagram /></Link>
+              <Link to="https://www.youtube.com/channel/UCzPII0m5wPxWbOJJweVPLpw" target="_blank" rel="noreferrer"><FaYoutube /></Link>
+              <Link to="https://www.linkedin.com/company/3daquaindia/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link>
+              <Link to="https://x.com/3daquaindia" target="_blank" rel="noreferrer"><FaTwitter /></Link>
             </div>
           </div>
         </div>

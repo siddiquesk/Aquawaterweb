@@ -140,10 +140,10 @@
 
 /* Red Button */
 .nav-red-btn {
-  background-color: maroon;
-  color: #0cf1d3 !important;
   padding: 1rem;
   display: inline-block;
+  background-color: var(--danger) !important;
+  color: var(--gray) !important;
   border-radius: 5px;
   font-weight: 600;
   width: 100%;

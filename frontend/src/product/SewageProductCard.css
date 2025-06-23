@@ -1,0 +1,196 @@
+.sewage-end-section {
+  max-width: 100%;
+  height: auto;
+  background-color: var(--light);
+  padding: 2rem;
+  padding-bottom: 5rem; /* ✅ Footer se space */
+}
+
+.sewage-end-section p {
+  color: #0077b6;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.sewage-end-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.sewage-end-products h1 {
+  font-size: 3rem;
+  color: var(--blue-dark, #023e8a);
+  text-transform: capitalize;
+}
+
+.see-more-end-product {
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: #b62a00;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+}
+
+.see-more-end-product:hover {
+  background-color: #023e8a;
+}
+
+.flex-water-supply-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.sewage-main-6-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+  min-width: 280px;
+}
+
+.main-water-supply-plants {
+  background-color: #0077b6;
+  color: white;
+  padding: 1.4rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.main-water-supply-plants:hover {
+  background-color: #023e8a;
+}
+
+.active-plant {
+  background-color: #0096c7;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 150, 199, 0.6);
+}
+
+.main-show-container {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 3rem;
+  min-width: 320px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-show-container .main-show-image {
+  flex: 1;
+  min-width: 250px;
+}
+
+.main-show-container .main-show-image img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.main-show-container .offers-plants-div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.main-show-container h1 {
+  font-size: 2.4rem;
+  color: #0077b6;
+  margin-bottom: 1rem;
+}
+
+.main-show-container p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.main-show-container button {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.main-show-container button:hover {
+  background-color: #023e8a;
+}
+@media (max-width: 768px) {
+  .flex-water-supply-div {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem; /* reduced padding */
+  }
+
+  .sewage-main-6-box {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .main-water-supply-plants {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .main-show-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; /* ✅ full width */
+    box-sizing: border-box; /* ✅ avoid overflow or leftover spacing */
+  }
+
+  .main-show-container .main-show-image {
+    width: 100%;
+  }
+
+  .main-show-container .main-show-image img {
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+  }
+
+  .main-show-container .offers-plants-div {
+    width: 100%;
+  }
+
+  .main-show-container .offers-plants-div h1 {
+    font-size: 2rem;
+  }
+
+  .main-show-container .offers-plants-div p {
+    font-size: 1.4rem;
+  }
+
+  .main-show-container button {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+}

@@ -1,0 +1,406 @@
+/* =========================
+   🏩 Sewage Treatment Plant CSS
+   ========================= */
+
+/* 🖼️ STP Top Image Section */
+.sewage-treatment-image {
+  max-width: 140rem;
+  width: 100%;
+  overflow: hidden; /* Prevent unwanted scroll */
+}
+
+.sewage-treatment-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Maintain image aspect ratio */
+}
+
+/* 🌐 Main Container: STP Flex Layout */
+.sewage-treatment-stp {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+/* 📘 Left Side: STP Description Box */
+.sewage-treatment-plant-div {
+  max-width: 60rem;
+  width: 100%;
+  height: 60rem;
+  background-color: #0a0a0a;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  color: var(--light);
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+.sewage-treatment-plant-div h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.sewage-treatment-plant-div p {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  text-align: justify;
+  margin-bottom: 1.2rem;
+}
+
+/* 📋 Output Area inside STP Left */
+.sewage-treatment-plant-div .out-area h2 {
+  color: var(--orange);
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.sewage-treatment-plant-div .out-area p {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.sewage-treatment-plant-div .out-area ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  list-style-type: disc;
+  margin: 0;
+}
+
+.sewage-treatment-plant-div .out-area ul li {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+  color: var(--light);
+}
+
+/* 📩 Right Side: STP Enquiry Form */
+.sewage-treatment-enquiry {
+  max-width: 50rem;
+  width: 100%;
+  height: 55rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sewage-treatment-enquiry h2 {
+  text-align: center;
+  color: #222;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* 📝 Enquiry Form Fields */
+.stp-enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stp-form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stp-input {
+  flex: 1;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.stp-textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  background: #f9f9f9;
+  color: #333;
+  resize: vertical;
+}
+
+.stp-form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stp-submit-btn,
+.stp-call-btn {
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  background-color: var(--orange);
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.stp-submit-btn:hover,
+.stp-call-btn:hover {
+  background-color: #ff9500;
+}
+
+/* 🏩 STP Manufacture Section */
+.sewage-manufacture-plants {
+  padding: 4rem 2rem;
+  background-color: #f5faff;
+}
+
+.sewage-manufacture-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.manufacture-div-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.manufacture-div-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.manufacture-content-flag {
+  flex: 1 1 500px;
+  padding: 1rem;
+}
+
+.manufacture-content-flag h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+.manufacture-content-flag h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #023e8a;
+  margin-bottom: 1rem;
+}
+
+.manufacture-content-flag p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+.manufacture-content-flag button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manufacture-content-flag button:hover {
+  background-color: #023e8a;
+}
+
+/* ⚙️ Technologies Used Section */
+.technology-we-are {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fffbf3;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  height: 55rem;
+}
+
+.left-content p,
+.left-content h1,
+.left-content h2 {
+  text-align: left;
+}
+
+.left-content p {
+  font-size: 1.6rem;
+  color: var(--danger);
+  margin-bottom: 0.5rem;
+}
+
+.left-content h1 {
+  font-size: 3rem;
+  color: #023e8a;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.left-content h2 {
+  font-size: 2rem;
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.tech-item {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #005f73;
+  transition: color 0.3s;
+}
+
+.tech-item:hover {
+  color: #023e8a;
+}
+
+.left-content button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-content button:hover {
+  background-color: #023e8a;
+}
+
+/* 🏆 Award Badge Side */
+.award-20-years {
+  background-color: #caf0f8;
+  padding: 1rem 1.5rem;
+  transform: rotate(-90deg);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.award-20-years img {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.award-20-years h1 {
+  font-size: 1.6rem;
+  color: #03045e;
+  white-space: nowrap;
+}
+
+/* 📱 Responsive Styling */
+@media (max-width: 768px) {
+  .sewage-treatment-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sewage-treatment-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .sewage-treatment-stp {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .sewage-treatment-plant-div,
+  .sewage-treatment-enquiry {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .stp-form-row {
+    flex-direction: column;
+  }
+
+  .stp-submit-btn,
+  .stp-call-btn {
+    width: 100%;
+  }
+
+  .sewage-treatment-plant-div h1 {
+    font-size: 2.6rem;
+  }
+
+  .sewage-treatment-enquiry h2 {
+    font-size: 2.4rem;
+  }
+
+  .sewage-manufacture-div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .manufacture-content-flag {
+    padding: 0;
+  }
+
+  .manufacture-content-flag h1 {
+    font-size: 2.2rem;
+  }
+
+  .manufacture-content-flag p {
+    font-size: 1.4rem;
+  }
+
+  .manufacture-content-flag button {
+    font-size: 1.4rem;
+  }
+
+  .technology-we-are {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .award-20-years {
+    display: none;
+  }
+}

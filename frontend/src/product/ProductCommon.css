@@ -1,0 +1,271 @@
+.common-element-sewage {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.common-element-sewage h1 {
+  font-size: 2.4rem;
+  color: #0077b6;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.common-tv-channel-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.common-tv-channel-images div {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.common-tv-channel-images div:hover {
+  transform: scale(1.05);
+}
+
+.common-tv-channel-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/*clients review*/
+/* 👤 Testimonial Section */
+.testimonial-section {
+  background-color: var(--dark-blue);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.testimonial-title {
+  font-size: 2.8rem;
+  color: #0077b6;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  width: 30%;
+  min-width: 24rem;
+  height: 28rem;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-card h3 {
+  color: #023e8a;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.client-role {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.client-feedback {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #333;
+}
+.client-review-stats {
+  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.client-review-card {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 1.2rem;
+  width: 28rem;
+  min-height: 11rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.client-review-card:hover {
+  transform: scale(1.05);
+}
+
+/* 🎨 ICONS */
+.review-icon {
+  font-size: 4.5rem;
+  min-width: 4.5rem;
+  color: #0077b6;
+}
+
+/* ✅ Different Icon Colors */
+.client-review-card:nth-child(1) .review-icon {
+  color: #0d6efd; /* Blue */
+  animation: pulse 2s infinite;
+}
+.client-review-card:nth-child(2) .review-icon {
+  color: #fd7e14; /* Orange */
+  animation: bounce 2s infinite;
+}
+.client-review-card:nth-child(3) .review-icon {
+  color: #20c997; /* Teal Green */
+  animation: rotate 3s linear infinite;
+}
+.client-review-card:nth-child(4) .review-icon {
+  color: #6f42c1; /* Purple */
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* ✅ TEXT */
+.client-review-card h2 {
+  font-size: 2.4rem;
+  color: #023e8a;
+  margin: 0;
+}
+
+.client-review-card p {
+  font-size: 1.2rem;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .client-review-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .client-review-card {
+    width: 90%;
+    justify-content: flex-start;
+  }
+}
+
+/* 🎯 Unique Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ✅ Responsive - stack images tighter on smaller screens */
+@media (max-width: 600px) {
+  .common-element-sewage h1 {
+    font-size: 2rem;
+  }
+
+  .common-tv-channel-images div {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .testimonial-section {
+    padding: 4rem 1rem;
+  }
+
+  .testimonial-title {
+    font-size: 2.2rem;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .testimonial-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .client-role {
+    font-size: 1.2rem;
+  }
+
+  .client-feedback {
+    font-size: 1.3rem;
+  }
+  .client-review-card {
+    width: 90%;
+  }
+
+  .review-icon {
+    font-size: 4rem;
+  }
+
+  .client-review-card h2 {
+    font-size: 2.2rem;
+  }
+
+  .client-review-card p {
+    font-size: 1.2rem;
+  }
+}
