@@ -3,48 +3,55 @@ import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
 import './Hero.css';
 
 const images = [
- 
+
+  {
+    src: '/images/tech18.webp',
+    title: 'Smart RO Systems',
+    desc: 'Industrial-grade filtration delivering clean, high-capacity water for commercial applications.'
+  },
+  {
+    src: '/images/tech4.webp',
+    title: 'Farm-Ready Water',
+    desc: 'Treated water optimized for irrigation, boosting crop health and sustainable farming.'
+  },
+  {
+    src: '/images/waterplant.avif',
+    title: 'Automated Water Plants',
+    desc: 'Advanced purification units that process and supply clean water for diverse needs.'
+  },
   {
     src: '/images/water3.avif',
-    title: 'Advanced Filtration',
-    desc: 'Enjoy safe and great-tasting water with our advanced multi-stage filtration systems designed to eliminate contaminants.'
+    title: 'Safe RO for Homes',
+    desc: 'Reliable RO systems ensuring pure, safe drinking water for every household.'
   },
   {
-    src: '/images/drop.avif',
-    title: 'Every Drop Matters',
-    desc: 'We believe every drop counts. Our technology ensures maximum efficiency in saving and purifying water for a better tomorrow.'
-  },
-  {
-    src: '/images/treatment7.avif',
-    title: 'Eco-friendly Plant',
-    desc: 'Our systems are built with sustainability in mind — reducing waste, conserving energy, and protecting the environment.'
-  },
-  {
-    src: '/images/treatment6.avif',
-    title: 'Your Health, Our Priority',
-    desc: 'We ensure the water you consume meets the highest standards of purity, promoting a healthier lifestyle for your family.'
-  },
-  {
-    src: '/images/treatment4.avif',
-    title: 'Purification is Our Promise',
-    desc: 'From installation to maintenance, we offer reliable solutions that make purified water accessible for everyone.'
+    src: '/images/waterpure.webp',
+    title: 'Every Drop Counts',
+    desc: 'Recycling and conservation technology designed to minimize water wastage smartly.'
   }
+
 ];
+
+
+
+
 
 
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imgLoaded, setImgLoaded] = useState(false);
 
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setImgLoaded(false);
+  };
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
     setImgLoaded(false);
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    setImgLoaded(false);
-  };
+
 
   const { src, title, desc } = images[currentIndex];
 
@@ -56,7 +63,7 @@ function Hero() {
             <FaArrowLeftLong />
           </button>
 
-          <figure className="image-container">
+          <div className="image-container">
             <img
               src={src}
               alt={title}
@@ -78,7 +85,7 @@ function Hero() {
               <h1 className='slider-content'>{title}</h1>
               <p className='slider-content'>{desc}</p>
             </figcaption>
-          </figure>
+          </div>
 
           <button className="arrow right-arrow" onClick={handleNext} aria-label="Next Slide">
             <FaArrowRightLong />

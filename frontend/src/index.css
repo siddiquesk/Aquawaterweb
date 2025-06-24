@@ -46,27 +46,41 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 🔒 Fixed position for static icon container */
 .static-icons {
   position: fixed;
   right: 0.5rem;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 999;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-@media (max-width: 600) {
+/* ✅ Correct media query syntax with px */
+@media (max-width: 600px) {
   .static-icons {
-    position: fixed;
-    right: 1rem;
-    top: 50%;
+    right: 2.8rem !important; /* More inside the screen */
+    top: 60%;
     transform: translateY(-50%);
-    z-index: 1000;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  }
+
+  .main-icons-div {
+    align-items: flex-end;
+  }
+
+  .main-icons-div .colors-icons-static {
+    font-size: 2.5rem; /* Slightly smaller for fit */
+    margin-right: 0.2rem; /* Adjust spacing */
+  }
+
+  .main-icons-div .fa-whatsapp,
+  .main-icons-div .fa-caller,
+  .main-icons-div .fa-mail {
+    padding: 0.3rem;
   }
 }
+
 h1,
 h2,
 h3,
@@ -75,7 +89,9 @@ h5,
 h6 {
   font-family: "DM Sans", sans-serif;
 }
-
+body {
+  overflow-x: hidden;
+}
 p,
 a,
 li {

@@ -5,8 +5,8 @@ import ProductCommon from '../product/ProductCommon';
 function Effluent() {
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/ETP.webp" alt="sewage-treatment" />
+      <section className="sewage-treatment-image-only">
+        <img src="./images/eff8.jpg" alt="eff" className="sewage-image" />
       </section>
 
       <div className="sewage-treatment-stp container">

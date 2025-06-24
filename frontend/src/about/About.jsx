@@ -7,12 +7,7 @@ function About() {
   return (
     <>
       {/* ========== Banner Image Section ========== */}
-      <div className="common-page-element">
-        <div className="first-common-image">
-          <img src="./images/about.webp" alt="about" />
-        </div>
-      </div>
-
+      
       {/* ========== Water Treatment Description Component ========== */}
       <AboutWater />
 

@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Contact.css"
 import MajorComp from '../pages/MajorComp'
 function Contact() {
+
+  const [contact, setContact] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    location: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContact((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted!");
+    setContact({
+      name: '',
+      email: '',
+      phone: '',
+      location: '',
+      message: ''
+    });
+  };
   return (
     <>
       {/* Top Banner Image Section */}
@@ -49,19 +77,19 @@ function Contact() {
 
         {/* RIGHT: Contact Form */}
         <article className="contact-enquire-right">
-          <form className="enquiry-form" onSubmit={(e) => e.preventDefault()} aria-label="Contact Us Form">
+          <form className="enquiry-form" aria-label="Contact Us Form" onSubmit={handleSubmit}>
             <div className="form-row">
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="text" name="name" placeholder="Your Name" value={contact.name} onChange={handleChange} required />
+              <input type="email" name="email" placeholder="Your Email" value={contact.email} onChange={handleChange} required />
             </div>
 
             <div className="form-row">
-              <input type="text" name="location" placeholder="Your Location" required />
-              <input type="tel" name="phone" placeholder="Your Phone Number" required />
+              <input type="text" name="location" placeholder="Your Location" value={contact.location} onChange={handleChange} required />
+              <input type="tel" name="phone" placeholder="Your Phone Number" value={contact.phone} onChange={handleChange} required />
             </div>
 
             <div className="form-full">
-              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+              <textarea name="message" placeholder="Your Message" rows="5" onChange={handleChange} value={contact.message} required></textarea>
             </div>
 
             <button type="submit">Submit</button>

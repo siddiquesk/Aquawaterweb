@@ -3,10 +3,9 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #b5fccd;
+  background-color: #4300ff;
   padding: 1.5rem 3rem;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 123, 255, 0.15);
   gap: 1.5rem;
 }
 
@@ -22,7 +21,7 @@
   align-items: center;
   gap: 0.8rem;
   font-size: 1.6rem;
-  color: var(--dark);
+  color: var(--white);
   white-space: nowrap;
 }
 .contact-box-2 {
@@ -30,18 +29,19 @@
   align-items: center;
   gap: 0.8rem;
   font-size: 1.6rem;
-  color: var(--dark);
+  color: var(--white);
   white-space: nowrap;
 }
 
 .contact-icon {
   font-size: 2rem;
-  color: #d60606;
+  color: maroon;
 }
 
 .contact-text {
   margin: 0;
   font-size: 1.4rem;
+  color: var(--white);
 }
 
 .right-group {
@@ -51,16 +51,19 @@
   flex: 1 1 auto;
   justify-content: flex-end;
   flex-wrap: nowrap;
+  color: var(--white);
 }
 
 .email-box,
 .language-box {
   flex: 0 0 18rem;
+  color: var(--white);
 }
 
 .select-wrapper {
   position: relative;
   width: 100%;
+  color: var(--white);
 }
 
 .language-select {

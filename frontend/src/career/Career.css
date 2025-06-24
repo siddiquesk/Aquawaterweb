@@ -11,7 +11,6 @@
 
 .career-section {
   width: 100%;
-  background-color: var(--gray-soft);
   :root {
     --blue-primary: #0077b6;
     --blue-light: #e0f7fa;

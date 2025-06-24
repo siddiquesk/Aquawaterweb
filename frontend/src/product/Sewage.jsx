@@ -6,9 +6,11 @@ import ProductCommon from './ProductCommon';
 function Sewage() {
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/sewage.webp" alt="sewage-treatment" />
+      <section className="sewage-treatment-image-only">
+        <img src="./images/sewage2.webp" alt="Sewage Treatment" className="sewage-image" />
       </section>
+
+
 
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">

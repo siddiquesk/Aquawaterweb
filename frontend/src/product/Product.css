@@ -2,18 +2,43 @@
    🏩 Sewage Treatment Plant CSS
    ========================= */
 
-/* 🖼️ STP Top Image Section */
-.sewage-treatment-image {
-  max-width: 140rem;
+.sewage-treatment-image-only {
   width: 100%;
-  overflow: hidden; /* Prevent unwanted scroll */
+  height: 45rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.sewage-treatment-image img {
+/* Image itself */
+.sewage-treatment-image-only .sewage-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  object-fit: cover; /* Maintain image aspect ratio */
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect */
+.sewage-treatment-image-only:hover .sewage-image {
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+}
+
+/* Responsive height */
+@media (max-width: 768px) {
+  .sewage-treatment-image-only {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sewage-treatment-image-only {
+    height: 15rem;
+  }
 }
 
 /* 🌐 Main Container: STP Flex Layout */
@@ -23,6 +48,7 @@
   flex-wrap: wrap;
   width: 90%;
   gap: 3rem;
+
   padding: 4rem 2rem;
   box-sizing: border-box;
 }
@@ -32,11 +58,11 @@
   max-width: 60rem;
   width: 100%;
   height: 60rem;
-  background-color: #0a0a0a;
+  background-color: #0065f8;
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  color: var(--light);
+  color: #fff;
   font-family: "Montserrat", sans-serif;
   overflow: hidden;
 }
@@ -57,7 +83,7 @@
 
 /* 📋 Output Area inside STP Left */
 .sewage-treatment-plant-div .out-area h2 {
-  color: var(--orange);
+  color: #fff;
   text-align: center;
   margin-top: 1.5rem;
   font-size: 2.4rem;
@@ -83,23 +109,23 @@
   font-size: 1.4rem;
   line-height: 2rem;
   padding-left: 1rem;
-  color: var(--light);
+  color: #fff;
 }
 
 /* 📩 Right Side: STP Enquiry Form */
 .sewage-treatment-enquiry {
   max-width: 50rem;
   width: 100%;
-  height: 55rem;
-  background-color: #ffffff;
+  height: 60rem;
+  background-color: #48a6a7;
   border-radius: 1rem;
   padding: 3rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .sewage-treatment-enquiry h2 {
   text-align: center;
-  color: #222;
+  color: #fff;
   font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -109,7 +135,7 @@
 .stp-enquiry-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .stp-form-row {
@@ -125,7 +151,7 @@
   border-radius: 0.5rem;
   font-size: 1.4rem;
   background: #f9f9f9;
-  color: #333;
+  color: #fff;
 }
 
 .stp-textarea {
@@ -134,8 +160,8 @@
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   font-size: 1.4rem;
-  background: #f9f9f9;
-  color: #333;
+  background: #fff;
+  color: #fff;
   resize: vertical;
 }
 
@@ -151,7 +177,7 @@
   padding: 1.2rem 2rem;
   font-size: 1.5rem;
   background-color: var(--orange);
-  color: #000;
+  color: #fff;
   border: none;
   border-radius: 0.5rem;
   text-align: center;
@@ -167,7 +193,8 @@
 /* 🏩 STP Manufacture Section */
 .sewage-manufacture-plants {
   padding: 4rem 2rem;
-  background-color: #f5faff;
+  background-color: #00caff;
+  color: #fff;
 }
 
 .sewage-manufacture-div {
@@ -200,7 +227,7 @@
 
 .manufacture-content-flag h2 {
   font-size: 2rem;
-  color: #0077b6;
+  color: #333446;
   margin-bottom: 0.5rem;
 }
 
@@ -214,7 +241,7 @@
 .manufacture-content-flag p {
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #333;
+  color: #000;
   margin-bottom: 2rem;
   text-align: justify;
 }

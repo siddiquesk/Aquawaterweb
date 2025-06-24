@@ -1,13 +1,13 @@
 .sewage-end-section {
   max-width: 100%;
   height: auto;
-  background-color: var(--light);
+  background-color: #00caff;
   padding: 2rem;
   padding-bottom: 5rem; /* ✅ Footer se space */
 }
 
 .sewage-end-section p {
-  color: #0077b6;
+  color: #000;
   margin-bottom: 0.8rem;
   font-weight: 500;
   font-size: 1.5rem;
@@ -50,7 +50,7 @@
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  background-color: #f5f5f5;
+  background-color: #fff;
   padding: 2rem;
   border-radius: 12px;
 }

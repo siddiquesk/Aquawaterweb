@@ -4,10 +4,6 @@ import MajorComp from "../pages/MajorComp"
 function Vision() {
   return (
     <>
-      <section className='vision-mission'>
-        <img src="./images/vision.webp" alt="vision" />
-      </section>
-
       <div className="section-vision-bar">
         <div className="color-div-vision container">
           <div className="vision-mission">
