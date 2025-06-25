@@ -12,19 +12,26 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.6rem 3rem;
-  background-color: #fff;
   height: 13vh;
 }
 
 /* Logo */
-.logo {
-  width: 5rem;
-  height: 5rem;
+
+.navbar.logo {
+  width: 10rem;
+  height: 10rem;
+  background-color: greenyellow;
+  border-radius: 50%;
+  z-index: 22222;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
+
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   background-color: transparent;
 }
 

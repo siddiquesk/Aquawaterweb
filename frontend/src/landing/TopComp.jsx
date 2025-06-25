@@ -21,7 +21,7 @@ function TopComp() {
           <address className="contact-box-2">
             <CiLocationOn className="contact-icon" />
             <p className="contact-text">
-              A-12, Sector 63, Industrial Area, Noida - 201301
+              A-12, Sector 63, Industrial Area, delhi - 201301
             </p>
           </address>
         </div>
