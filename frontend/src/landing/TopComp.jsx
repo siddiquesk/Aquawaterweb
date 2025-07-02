@@ -2,6 +2,7 @@ import React from 'react'
 import { IoCallOutline } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 import { TfiEmail } from "react-icons/tfi";
+import { IoWaterOutline } from "react-icons/io5";
 import "./TopComp.css"
 function TopComp() {
   return (
@@ -10,26 +11,29 @@ function TopComp() {
         <div className="contact-group">
           <article className="contact-box">
             <IoCallOutline className="contact-icon" />
-            <p className="contact-text">+91-77889 55667</p>
+            <p className="contact-text">+91-9560307837</p>
           </article>
 
           <article className="contact-box">
-            <IoCallOutline className="contact-icon" />
-            <p className="contact-text">+91-99999 88888</p>
-          </article>
-
-          <address className="contact-box-2">
             <CiLocationOn className="contact-icon" />
             <p className="contact-text">
-              A-12, Sector 63, Industrial Area, delhi - 201301
+              C-988, Paper Market, IFC  <br /> Ghazipur,
+              Delhi - 110096
             </p>
-          </address>
+          </article>
+
+          <article className="contact-box full-width">
+            <p className="contact-text" style={{ padding: '3px', textAlign: 'center' }}>
+              <strong ><IoWaterOutline className='contact-icon' />HRS Aquatreat Technologies</strong>
+            </p>
+          </article>
         </div>
+
 
         <div className="right-group">
           <article className="contact-box email-box">
             <TfiEmail className="contact-icon" />
-            <p className="contact-text">contact@watervision.in</p>
+            <p className="contact-text">mukesh.hrsaquatreat@gmail.com</p>
           </article>
 
           <div className="language-box">
@@ -59,6 +63,7 @@ function TopComp() {
           </div>
         </div>
       </section>
+
     </>
   )
 }

@@ -1,10 +1,9 @@
 import React from 'react';
 import "./Footer.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaArrowRight } from 'react-icons/fa';
-import { MdOutlineFactory } from "react-icons/md";
-import { IoMdBusiness } from "react-icons/io";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="footer">
@@ -12,60 +11,46 @@ function Footer() {
 
         {/* Company Info */}
         <div className="footer-section">
-          <h3>3D Aqua Water Treatment Company</h3>
-
+          <h3>Hrsaquatreat Company</h3>
           <p>
-            <FaMapMarkerAlt /> <strong>Head Office:</strong><br />
-            B-26, Okhla Industrial Area, Phase-2,<br />
-            Opp. Mercedes Showroom, New Delhi-110020
+            <FaMapMarkerAlt /> <strong>Address:</strong><br />
+            Hrs Aquatreat Technologies,<br />
+            C 988, Paper Market, IFC Ghazipur, Delhi 110096
           </p>
-
           <p>
-            <FaPhoneAlt /> <strong>Phone:</strong> 011-4015 9090
+            <FaPhoneAlt /> <strong>Phone:</strong> 9560307837
           </p>
-
-          <p>
-            <MdOutlineFactory /> <strong>Factory Address:</strong><br />
-            C-268, Sector-10, Noida (UP)-201301
-          </p>
-
-          <p>
-            <IoMdBusiness /> <strong>Corporate Office:</strong><br />
-            11128, Gaur City Mall, Noida Extension,<br />
-            Noida (UP)-201318
-          </p>
-
-          <p>
-            <FaPhoneAlt /> <strong>Phone:</strong> 8860 398 498, 9910 220 919
-          </p>
-
           <p>
             <FaEnvelope /> <strong>Email:</strong>{" "}
-            <a href="mailto:info@3daqua.in">info@3daqua.in</a>
+            <a href="mailto:mukesh.hrsaquatreat@gmail.com">mukesh.hrsaquatreat@gmail.com</a>
           </p>
         </div>
-
 
         {/* Our Products */}
         <div className="footer-section">
           <h4>Our Products</h4>
           <ul>
             {[
-              "Water Treatment Plant", "Commercial Water Softener", "Domestic Water Softener",
-              "Industrial RO Plant", "Commercial RO Plant", "Water ATM", "Iron Remover", "Fire Fighting System"
+              { label: "Water Treatment Plant", path: "/sewage-treatment-plant" },
+              { label: "Commercial Water Softener", path: "/effluent-treatment-plant" },
+              { label: "Domestic Water Softener", path: "/domestic-water-softener" },
+              { label: "Industrial RO Plant", path: "/more-products" },
+              { label: "Commercial RO Plant", path: "/commercial-ro-plant" },
+              { label: "Water ATM", path: "/ultra-filtration" },
+              { label: "Iron Remover", path: "/more-products" },
+              { label: "Fire Fighting System", path: "/fire-fighting" }
             ].map((item, i) => (
-              <li key={i}><FaArrowRight /> <a href="#">{item}</a></li>
+              <li key={i}><FaArrowRight /> <Link to={item.path}>{item.label}</Link></li>
             ))}
           </ul>
+
           {/* Social Media */}
           <div className="footer-section icons-h2">
             <h4>Follow Us</h4>
             <div className="social-icons">
-              <Link to="https://www.facebook.com/3daquaindia/" target="_blank" rel="noreferrer"><FaFacebookF /></Link>
-              <Link to="https://www.instagram.com/3daquaindia/" target="_blank" rel="noreferrer"><FaInstagram /></Link>
-              <Link to="https://www.youtube.com/channel/UCzPII0m5wPxWbOJJweVPLpw" target="_blank" rel="noreferrer"><FaYoutube /></Link>
-              <Link to="https://www.linkedin.com/company/3daquaindia/" target="_blank" rel="noreferrer"><FaLinkedinIn /></Link>
-              <Link to="https://x.com/3daquaindia" target="_blank" rel="noreferrer"><FaTwitter /></Link>
+              <a href="https://www.facebook.com/share_channel/#" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+              <a href="https://www.linkedin.com/feed/?linkOrigin=LI_BADGE&shareActive=true&shareUrl=https%3A%2F%2Fwww.hrsaquatreat.com%2F" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+              <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.hrsaquatreat.com%2F" target="_blank" rel="noreferrer"><FaTwitter /></a>
             </div>
           </div>
         </div>
@@ -75,10 +60,16 @@ function Footer() {
           <h4>Filtration Systems</h4>
           <ul>
             {[
-              "Dosing System", "Sand Filter", "Activated Carbon Filter", "Pressure Pump",
-              "Sewage Treatment Plant", "DM Plant", "Bottling Plant", "Ultra Filtration System"
+              { label: "Dosing System", path: "/more-products" },
+              { label: "Sand Filter", path: "/commercial-ro-plant" },
+              { label: "Activated Carbon Filter", path: "/more-products" },
+              { label: "Pressure Pump", path: "/more-products" },
+              { label: "Sewage Treatment Plant", path: "/sewage-treatment-plant" },
+              { label: "DM Plant", path: "/domestic-water-softener" },
+              { label: "Bottling Plant", path: "/more-products" },
+              { label: "Ultra Filtration System", path: "/ultra-filtration" }
             ].map((item, i) => (
-              <li key={i}><FaArrowRight /> <a href="#">{item}</a></li>
+              <li key={i}><FaArrowRight /> <Link to={item.path}>{item.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -88,26 +79,31 @@ function Footer() {
           <h4>Other Services</h4>
           <ul>
             {[
-              "Multigrade Filter", "Pouch Packing Machine", "Chiller Plant", "Softener Salt",
-              "Water Cooler", "Effluent Treatment Plant", "Domestic RO", "Fabrication & Job Work"
+              { label: "Multigrade Filter", path: "/more-products" },
+              { label: "Pouch Packing Machine", path: "/more-products" },
+              { label: "Chiller Plant", path: "/more-products" },
+              { label: "Softener Salt", path: "/more-products" },
+              { label: "Water Cooler", path: "/more-products" },
+              { label: "Effluent Treatment Plant", path: "/effluent-treatment-plant" },
+              { label: "Domestic RO", path: "/domestic-water-softener" },
+              { label: "Fabrication & Job Work", path: "/fabrication-job-work" }
             ].map((item, i) => (
-              <li key={i}><FaArrowRight /> <a href="#">{item}</a></li>
+              <li key={i}><FaArrowRight /> <Link to={item.path}>{item.label}</Link></li>
             ))}
           </ul>
         </div>
 
       </div>
 
-
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>Copyright &copy; 2024 3D Aqua. All Rights Reserved.</p>
+        <p>Copyright &copy; 2024 Hrsaquatreat Company. All Rights Reserved.</p>
         <p>Total Visitors: 0</p>
         <div className="footer-links">
-          <a href="#">Career</a>
-          <a href="#">FAQ</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Search Here</a>
+          <Link to="/career">Career</Link>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/contact">Contact Us</Link>
+          <Link to="/search">Search Here</Link>
         </div>
       </div>
     </footer>

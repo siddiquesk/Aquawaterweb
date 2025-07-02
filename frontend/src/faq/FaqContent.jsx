@@ -32,7 +32,7 @@ function FaqContent() {
       <div className="helping-faq-content">
         <span><TbMessages className='faq-icon1' /></span>
         <h1>How can we help you</h1>
-        <p>Have your own questions? (or) +91-1981717266</p>
+        <p>Have your own questions? (or)  +91-9560307837</p>
       </div>
 
       {/* FAQ list */}

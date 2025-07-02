@@ -1,13 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import SewageProductCard from "../product/SewageProductCard"
 import ProductCommon from "../product/ProductCommon"
 function ReverseOsmosis() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
+
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/commercial.webp" alt="sewage-treatment" />
+      <section class="common-section">
+        <div class="common-content">
+          <h2>Reverse Osmosis (RO) Plant</h2>
+          <p>
+            Our reverse osmosis plants deliver pure and safe drinking water by effectively removing dissolved salts, bacteria, and impurities.
+            Ideal for residential, commercial, and industrial use, our RO systems are energy-efficient, low-maintenance, and designed for long-lasting performance.
+          </p>
+          <div class="image-wrapper">
+            <img src="./images/r4.webp" alt="Reverse Osmosis Plant" />
+          </div>
+        </div>
       </section>
+
 
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">
@@ -37,24 +67,66 @@ function ReverseOsmosis() {
         <div className="sewage-treatment-enquiry">
           <h2>Enquiry Form</h2>
 
-          <form className="stp-enquiry-form" aria-label="Commercial RO Plant Enquiry Form">
+          <form
+            className="stp-enquiry-form"
+            aria-label="Sewage Treatment Enquiry Form"
+            action="https://formsubmit.co/mukesh.hrsaquatreat@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="stp-form-row">
-              <input type="text" name="name" placeholder="Your Name" required className="stp-input" />
-              <input type="tel" name="phone" placeholder="Your Phone" required className="stp-input" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-row">
-              <input type="email" name="email" placeholder="Email" className="stp-input" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-full">
-              <textarea name="message" placeholder="Type Your Message" rows="5" required className="stp-textarea"></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className='stp-textarea'
+                rows="5"
+                required
+                onChange={() => setSubmitted(false)}
+              ></textarea>
             </div>
 
             <div className="stp-form-buttons">
               <button type="submit" className="stp-submit-btn">Submit</button>
-              <button className="stp-call-btn">Call Us: 917277262662</button>
+              <button className="stp-call-btn">Call Us: 91-9560307837</button>
             </div>
+
+            {submitted && (
+              <p className="form-success-message">
+                Thank you! Your enquiry has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
       </div>

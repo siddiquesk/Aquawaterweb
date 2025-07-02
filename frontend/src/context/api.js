@@ -10,7 +10,7 @@ const PlantData = [
     id: 2,
     image: "/plants/effluent-treatment-plant-12 (1).webp",
     title: "Effluent Treatment Plant (ETP)",
-    description: "Removes hazardous chemicals and pollutants from industrial effluents before safe release.",
+    description: "Removes hazardous chemicals and pollutants from industrial release.",
     readMore: "Ideal for textile, pharma, and chemical industries."
   },
   {

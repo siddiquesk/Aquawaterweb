@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './App.css'
 import TopComp from './landing/TopComp'
 import Navbar from './Navbar/Navbar'
@@ -21,9 +21,12 @@ import UltraFiltration from './effluent/UltraFiltration'
 import Fabrication from './effluent/Fabrication'
 import FireFighting from './effluent/FireFighting'
 import MoreProduct from './moreproduct/MoreProduct'
+import ScrollTop from './ScrollTop';
+import Scanner from './scanner/Scanner';
 function App() {
   return (
     <>
+      <ScrollTop />
       <div className='static-navbar-all'>
         <TopComp />
         <Navbar />
@@ -48,6 +51,7 @@ function App() {
         <Route path='/fabrication-job-work' element={<Fabrication />} />
         <Route path='/fire-fighting' element={<FireFighting />} />
         <Route path='/more-products' element={<MoreProduct />} />
+        <Route path='/scanner' element={<Scanner />} />
       </Routes>
       <Footer />
     </>

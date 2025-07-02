@@ -1,26 +1,51 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import SewageProductCard from '../product/SewageProductCard';
 import ProductCommon from '../product/ProductCommon';
+
 function Fabrication() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
+
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/fabrication1.webp" alt="fabrication" />
+      <section className="common-section">
+        <div className="common-content">
+          <h2>Fabrication and Job Work</h2>
+          <p>
+            We specialize in high-quality fabrication and job work services...
+          </p>
+          <div className="image-wrapper">
+            <img src="./images/fab2.webp" alt="Fabrication and Job Work" />
+          </div>
+        </div>
       </section>
-
 
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">
           <h1>Fabrication & Job Work Services</h1>
           <p>
-            3D Aqua offers expert fabrication and job work services for a wide range of industrial requirements. Our team specializes in MS/SS fabrication, custom structural work, industrial tanks, and equipment enclosures. We cater to sectors like water treatment, chemical processing, and manufacturing units with precision-based fabrication solutions.
-            <br />
-            All our fabrication work is carried out using advanced tools and skilled manpower to ensure durability and strength. Whether it’s a custom metal frame or heavy-duty industrial structure, 3D Aqua guarantees quality workmanship, timely delivery, and cost-effective services tailored to your project needs.
+            3D Aqua offers expert fabrication and job work services...
           </p>
           <div className="out-area">
             <h2>Our Areas of Expertise</h2>
-            <p>We specialize in:</p>
             <ul>
               <li>MS and SS structural fabrication</li>
               <li>Custom industrial tank and vessel manufacturing</li>
@@ -29,34 +54,74 @@ function Fabrication() {
               <li>Timely delivery with high precision and quality</li>
             </ul>
           </div>
-
         </div>
 
         <div className="sewage-treatment-enquiry">
           <h2>Enquiry Form</h2>
 
-          <form className="stp-enquiry-form" aria-label="Fabrication Job Work Enquiry Form">
+          <form
+            className="stp-enquiry-form"
+            aria-label="Fabrication Enquiry Form"
+            action="https://formsubmit.co/mukesh.hrsaquatreat@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="stp-form-row">
-              <input type="text" name="name" placeholder="Your Name" required className="stp-input" />
-              <input type="tel" name="phone" placeholder="Your Phone" required className="stp-input" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-row">
-              <input type="email" name="email" placeholder="Email" className="stp-input" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-full">
-              <textarea name="message" placeholder="Describe Your Fabrication/Job Work Requirement" rows="5" required className="stp-textarea"></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className="stp-textarea"
+                rows="5"
+                required
+                onChange={() => setSubmitted(false)}
+              ></textarea>
             </div>
 
             <div className="stp-form-buttons">
               <button type="submit" className="stp-submit-btn">Submit</button>
-              <button className="stp-call-btn">Call Us: 917277262662</button>
+              <a href="tel:919560307837" className="stp-call-btn">Call Us: 91-9560307837</a>
             </div>
+
+            {submitted && (
+              <p className="form-success-message">
+                ✅ Thank you! Your enquiry has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
       </div>
-
 
       <div className="sewage-manufacture-plants">
         <div className="sewage-manufacture-div">
@@ -67,16 +132,11 @@ function Fabrication() {
             <h2>Why We Are the Best</h2>
             <h1>Fabrication & Job Work – 3D Aqua Expertise</h1>
             <p>
-              At 3D Aqua, we take pride in delivering top-notch fabrication and job work services that meet the highest industry standards. With years of hands-on experience and a team of skilled professionals, we offer reliable MS/SS fabrication, structural work, industrial tank making, and customized metal solutions for various industrial applications.
-              <br /><br />
-              What sets us apart is our commitment to quality, precision, and timely delivery. We use advanced machinery, follow strict quality control, and ensure each project is executed with complete transparency and professionalism. Whether it's a small-scale custom job or large industrial fabrication, we handle it all with excellence.
-              <br /><br />
-              Join hands with 3D Aqua and experience hassle-free fabrication solutions tailored to your project needs. Your satisfaction and trust are what drive us to perform better every day.
+              At 3D Aqua, we take pride in delivering top-notch fabrication and job work services...
             </p>
           </div>
         </div>
       </div>
-
 
       <div className="technology-we-are">
         <div className="left-content">
@@ -109,7 +169,8 @@ function Fabrication() {
       <SewageProductCard />
       <ProductCommon />
     </>
-  )
+  );
 }
 
-export default Fabrication
+export default Fabrication;
+

@@ -1,0 +1,40 @@
+.scanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full viewport height */
+  background-color: #f4f4f4;
+}
+
+.scanner-card {
+  text-align: center;
+  background: white;
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+.scanner-image {
+  max-width: 30rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+}
+
+@media (max-width: 678px) {
+  .scanner-image {
+    max-width: 22rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+  }
+}

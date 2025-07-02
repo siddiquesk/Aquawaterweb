@@ -2,30 +2,31 @@ import React, { useState } from 'react';
 import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
 import './Hero.css';
 
-const images = [
 
+
+const images = [
   {
-    src: '/images/tech18.webp',
+    src: '/images/waterplant7.jpeg',
     title: 'Smart RO Systems',
     desc: 'Industrial-grade filtration delivering clean, high-capacity water for commercial applications.'
   },
   {
-    src: '/images/tech4.webp',
+    src: '/images/waterplant4.jpeg',
     title: 'Farm-Ready Water',
     desc: 'Treated water optimized for irrigation, boosting crop health and sustainable farming.'
   },
   {
-    src: '/images/waterplant.avif',
+    src: '/images/waterplant5.jpeg',
     title: 'Automated Water Plants',
     desc: 'Advanced purification units that process and supply clean water for diverse needs.'
   },
   {
-    src: '/images/water3.avif',
+    src: '/images/waterplant6.jpeg',
     title: 'Safe RO for Homes',
     desc: 'Reliable RO systems ensuring pure, safe drinking water for every household.'
   },
   {
-    src: '/images/waterpure.webp',
+    src: '/images/waterplant9.jpeg',
     title: 'Every Drop Counts',
     desc: 'Recycling and conservation technology designed to minimize water wastage smartly.'
   }

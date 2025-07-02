@@ -1,14 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import SewageProductCard from "../product/SewageProductCard"
 import ProductCommon from "../product/ProductCommon"
 
 function Domestic() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/domestic.webp" alt="sewage-treatment" />
+      <section class="common-section">
+        <div class="common-content">
+          <h2>Domestic Water Softener</h2>
+          <p>
+            Our domestic water softeners are designed to eliminate hardness-causing minerals like calcium and magnesium from your household water supply.
+            Enjoy cleaner laundry, longer-lasting appliances, and healthier skin and hair with our compact and efficient water softening solutions.
+          </p>
+          <div class="image-wrapper">
+            <img src="./images/sewage1.webp" alt="Domestic Water Softener" />
+          </div>
+        </div>
       </section>
+
 
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">
@@ -38,24 +67,66 @@ function Domestic() {
         <div className="sewage-treatment-enquiry">
           <h2>Enquiry Form</h2>
 
-          <form className="stp-enquiry-form" aria-label="Domestic Water Supply Enquiry Form">
+          <form
+            className="stp-enquiry-form"
+            aria-label="Sewage Treatment Enquiry Form"
+            action="https://formsubmit.co/mukesh.hrsaquatreat@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="stp-form-row">
-              <input type="text" name="name" placeholder="Your Name" required className="stp-input" />
-              <input type="tel" name="phone" placeholder="Your Phone" required className="stp-input" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-row">
-              <input type="email" name="email" placeholder="Email" className="stp-input" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-full">
-              <textarea name="message" placeholder="Type Your Message" rows="5" required className="stp-textarea"></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className='stp-textarea'
+                rows="5"
+                required
+                onChange={() => setSubmitted(false)}
+              ></textarea>
             </div>
 
             <div className="stp-form-buttons">
               <button type="submit" className="stp-submit-btn">Submit</button>
-              <button className="stp-call-btn">Call Us: 917277262662</button>
+              <button className="stp-call-btn">Call Us: 91-9560307837</button>
             </div>
+
+            {submitted && (
+              <p className="form-success-message">
+                Thank you! Your enquiry has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
       </div>

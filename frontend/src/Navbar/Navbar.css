@@ -16,23 +16,14 @@
 }
 
 /* Logo */
-
-.navbar.logo {
-  width: 10rem;
-  height: 10rem;
-  background-color: greenyellow;
-  border-radius: 50%;
-  z-index: 22222;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+.navbar .logo {
+  width: 8rem;
+  height: auto;
 }
-
-.logo img {
+.navbar .logo img {
   width: 100%;
-  height: 100%;
-  background-color: transparent;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Nav Links */
@@ -293,6 +284,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .mobile-fabars {
+    z-index: -1111;
+  }
   .nav-links,
   .nav-actions {
     display: none;
@@ -378,4 +372,9 @@
     border-radius: 40px;
     margin-left: 1rem;
   }
+}
+
+/* New Rule: hide menu icon when drawer is open */
+.menu-icon.hidden {
+  display: none !important;
 }

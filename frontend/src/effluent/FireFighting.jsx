@@ -1,13 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import SewageProductCard from '../product/SewageProductCard';
 import ProductCommon from '../product/ProductCommon';
 function FireFighting() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
+
   return (
     <>
-      <section className='sewage-treatment-image'>
-        <img src="./product/fire-fighting.webp" alt="fire fighting" />
+      <section class="common-section">
+        <div class="common-content">
+          <h2>Fire Fighting System</h2>
+          <p>
+            We offer advanced fire fighting systems that ensure maximum safety in residential, commercial, and industrial environments.
+            Our solutions include fire hydrant networks, sprinkler systems, smoke detectors, and fire extinguishers — all designed to detect, control, and suppress fire hazards effectively.
+          </p>
+          <div class="image-wrapper">
+            <img src="./images/fire3.webp" alt="Fire Fighting System" />
+          </div>
+        </div>
       </section>
+
+
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">
           <h1>Fire Fighting & Alarm Detection System</h1>
@@ -36,24 +67,66 @@ function FireFighting() {
         <div className="sewage-treatment-enquiry">
           <h2>Enquiry Form</h2>
 
-          <form className="stp-enquiry-form" aria-label="Fire Safety Enquiry Form">
+          <form
+            className="stp-enquiry-form"
+            aria-label="Sewage Treatment Enquiry Form"
+            action="https://formsubmit.co/mukesh.hrsaquatreat@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="stp-form-row">
-              <input type="text" name="name" placeholder="Your Name" required className="stp-input" />
-              <input type="tel" name="phone" placeholder="Your Phone" required className="stp-input" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-row">
-              <input type="email" name="email" placeholder="Email" className="stp-input" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-full">
-              <textarea name="message" placeholder="Type Your Fire Safety Requirement" rows="5" required className="stp-textarea"></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className='stp-textarea'
+                rows="5"
+                required
+                onChange={() => setSubmitted(false)}
+              ></textarea>
             </div>
 
             <div className="stp-form-buttons">
               <button type="submit" className="stp-submit-btn">Submit</button>
-              <button className="stp-call-btn">Call Us: 917277262662</button>
+              <button className="stp-call-btn">Call Us: 91-9560307837</button>
             </div>
+
+            {submitted && (
+              <p className="form-success-message">
+                Thank you! Your enquiry has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
       </div>

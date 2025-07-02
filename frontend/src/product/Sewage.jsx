@@ -1,16 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react';
 import "./Product.css";
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import SewageProductCard from './SewageProductCard';
 import ProductCommon from './ProductCommon';
+
 function Sewage() {
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
+
   return (
     <>
-      <section className="sewage-treatment-image-only">
-        <img src="./images/sewage2.webp" alt="Sewage Treatment" className="sewage-image" />
+      <section className="common-section">
+        <div className="common-content">
+          <h2>Sewage Treatment Plant</h2>
+          <p>
+            Our advanced sewage treatment systems ensure efficient waste processing,
+            meeting environmental standards with cutting-edge technology.
+          </p>
+          <div className="image-wrapper">
+            <img src="./images/sewage2.webp" alt="Sewage Treatment" />
+          </div>
+        </div>
       </section>
-
-
 
       <div className="sewage-treatment-stp container">
         <div className="sewage-treatment-plant-div">
@@ -18,7 +45,7 @@ function Sewage() {
           <p>
             A Sewage Treatment Plant (STP) is designed to remove impurities and harmful elements from wastewater using advanced physical, chemical, and biological processes. These systems ensure that water is treated efficiently before being released or reused, helping to protect the environment and conserve resources.
             <br />
-            At 3D Aqua, we manufacture high-quality STP plants in both civil and mechanical models. Our clients consistently appreciate the compact structure, ease of operation, long-lasting durability, minimal maintenance, resistance to corrosion, and overall high performance of our STP systems.
+            At HRS Aquatreat, we manufacture high-quality STP plants in both civil and mechanical models. Our clients consistently appreciate the compact structure, ease of operation, long-lasting durability, minimal maintenance, resistance to corrosion, and overall high performance of our STP systems.
           </p>
 
           <div className="out-area">
@@ -36,32 +63,73 @@ function Sewage() {
             </ul>
           </div>
         </div>
+
         <div className="sewage-treatment-enquiry">
           <h2>Enquiry Form</h2>
+          <form
+            className="stp-enquiry-form"
+            aria-label="Sewage Treatment Enquiry Form"
+            action="https://formsubmit.co/mukesh.hrsaquatreat@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+          >
+            <input type="hidden" name="_captcha" value="false" />
 
-          <form className="stp-enquiry-form" aria-label="Sewage Treatment Enquiry Form">
             <div className="stp-form-row">
-              <input type="text" name="name" placeholder="Your Name" required className="stp-input" />
-              <input type="tel" name="phone" placeholder="Your Phone" required className="stp-input" />
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-row">
-              <input type="email" name="email" placeholder="Email" className="stp-input" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="stp-input"
+                onChange={() => setSubmitted(false)}
+              />
             </div>
 
             <div className="stp-form-full">
-              <textarea name="message" placeholder="Type Your Message" rows="5" required className="stp-textarea"></textarea>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                className='stp-textarea'
+                rows="5"
+                required
+                onChange={() => setSubmitted(false)}
+              ></textarea>
             </div>
 
             <div className="stp-form-buttons">
               <button type="submit" className="stp-submit-btn">Submit</button>
-              <button className="stp-call-btn">Call Us: 917277262662</button>
+              <button className="stp-call-btn">Call Us: 91-9560307837</button>
             </div>
+
+            {submitted && (
+              <p className="form-success-message">
+                Thank you! Your enquiry has been sent successfully.
+              </p>
+            )}
           </form>
         </div>
       </div>
 
-      {/*sewage manufacture plants */}
       <div className="sewage-manufacture-plants">
         <div className="sewage-manufacture-div">
           <div className="manufacture-div-image">
@@ -77,7 +145,6 @@ function Sewage() {
         </div>
       </div>
 
-      {/*technology used in manufacture */}
       <div className="technology-we-are">
         <div className="left-content">
           <p>Important Role</p>
@@ -104,10 +171,12 @@ function Sewage() {
           <h1>20+ Year of Experience</h1>
         </div>
       </div>
+
       <SewageProductCard />
       <ProductCommon />
     </>
-  )
+  );
 }
 
-export default Sewage
+export default Sewage;
+

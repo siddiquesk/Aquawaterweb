@@ -7,16 +7,16 @@ function About() {
   return (
     <>
       {/* ========== Banner Image Section ========== */}
-      
+
       {/* ========== Water Treatment Description Component ========== */}
       <AboutWater />
 
       {/* ========== Company Strength Section ========== */}
       <section className="about-strengths">
         <div className="container">
-          <h2>Why Choose 3D Aqua Water Treatment Company?</h2>
+          <h2>Why Choose HRS Aquatreat Water Treatment Company?</h2>
           <p className="intro-text">
-            3D Aqua is a trusted name for complete water treatment solutions in India. Here's why customers across the country prefer us:
+            HRS Aquatreat is a trusted name for complete water treatment solutions in India. Here's why customers across the country prefer us:
           </p>
 
           {/* Strength Points List */}
@@ -37,7 +37,7 @@ function About() {
               <strong>✔ Own Manufacturing Unit:</strong> Located at C-268, Sector-10, Noida (UP), our in-house manufacturing unit ensures quality and timely delivery.
             </p>
             <p>
-              <strong>✔ Trusted Nationwide:</strong> Known for reliability and effectiveness, 3D Aqua has become a symbol of trust across the water treatment industry.
+              <strong>✔ Trusted Nationwide:</strong> Known for reliability and effectiveness, HRS Aquatreat has become a symbol of trust across the water treatment industry.
             </p>
           </div>
         </div>

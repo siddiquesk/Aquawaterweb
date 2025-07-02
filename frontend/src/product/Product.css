@@ -2,42 +2,57 @@
    🏩 Sewage Treatment Plant CSS
    ========================= */
 
-.sewage-treatment-image-only {
+.common-section {
   width: 100%;
-  height: 45rem;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
 }
 
-/* Image itself */
-.sewage-treatment-image-only .sewage-image {
+.common-content {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.common-content h2 {
+  font-size: 2.9rem;
+  color: #0a3d62;
+  margin-bottom: 0.5rem;
+}
+
+.common-content p {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.image-wrapper img {
   width: 100%;
-  height: 100%;
+  max-height: 70rem;
   object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-.sewage-treatment-image-only:hover .sewage-image {
-  transform: scale(1.04);
-  -webkit-transform: scale(1.04);
-  -moz-transform: scale(1.04);
-  -ms-transform: scale(1.04);
-  -o-transform: scale(1.04);
+.image-wrapper img:hover {
+  transform: scale(1.02);
 }
 
-/* Responsive height */
+/* Responsive */
 @media (max-width: 768px) {
-  .sewage-treatment-image-only {
-    height: 20rem;
+  .common-content {
+    width: 90%;
   }
-}
 
-@media (max-width: 480px) {
-  .sewage-treatment-image-only {
-    height: 15rem;
+  .common-content h2 {
+    font-size: 2rem;
+  }
+
+  .common-content p {
+    font-size: 1.5rem;
   }
 }
 
@@ -160,8 +175,6 @@
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   font-size: 1.4rem;
-  background: #fff;
-  color: #fff;
   resize: vertical;
 }
 

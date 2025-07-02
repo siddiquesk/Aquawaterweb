@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
@@ -14,13 +14,14 @@ function Navbar() {
         <nav className="navbar">
           {/* Logo */}
           <div className="logo">
-            <img src="/images/mainlogo.jpg" alt="Aqua Logo" />
+            <img src="/images/logo6.webp" alt="Aqua Logo" />
           </div>
 
           {/* Hamburger Icon */}
-          <div className="menu-icon" onClick={() => setIsOpen(true)}>
-            <FaBars />
+          <div className={`menu-icon ${isOpen ? "hidden" : ""}`} onClick={() => setIsOpen(true)}>
+            <FaBars className="mobile-fabars" />
           </div>
+
 
           {/* Desktop Nav Links */}
           <ul className="nav-links desktop-only">
@@ -80,7 +81,7 @@ function Navbar() {
 
           {/* Desktop Actions */}
           <div className="nav-actions desktop-only">
-            <h4>PayHere</h4>
+            <NavLink to="/scanner"><h4>PayHere</h4></NavLink>
             <h4>3dAquaStore</h4>
             <Link to="/contact" className="nav-contact">Let's Talk</Link>
           </div>
@@ -93,7 +94,7 @@ function Navbar() {
       {/* Mobile Drawer */}
       <aside className={`drawer ${isOpen ? "open" : ""}`}>
         <div className="drawer-header">
-          <img src="/images/logo4.jpg" alt="Logo" />
+          <img src="/images/logo6.webp" alt="Logo" />
           <FaTimes className="close-icon" onClick={() => setIsOpen(false)} />
         </div>
 
@@ -145,7 +146,6 @@ function Navbar() {
               <li><Link to="/fabrication-job-work" onClick={() => setIsOpen(false)}>Fabrication & Job Work</Link></li>
             </ul>
           )}
-
           <li><Link to="/clients" onClick={() => setIsOpen(false)}>Clients</Link></li>
           <li><Link to="/faq" onClick={() => setIsOpen(false)}>FAQ</Link></li>
           <li><Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>

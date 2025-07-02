@@ -1,3 +1,107 @@
+/* Parent Container */
+.common-page-element {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content Box */
+.client-banner-container {
+  max-width: 148rem;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+/* Heading */
+.client-heading {
+  font-size: 3rem;
+  color: #007b8f;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+/* Paragraph Text */
+.client-subtext {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Pillars Box Layout */
+.client-pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+/* Individual Pillar Box */
+.pillar-box {
+  background-color: #d4f1f4;
+  color: #004d4d;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.pillar-box:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-banner-container {
+    padding: 2rem 1rem;
+  }
+
+  .client-heading {
+    font-size: 2rem;
+  }
+
+  .client-subtext {
+    font-size: 1rem;
+  }
+
+  .pillar-box {
+    font-size: 0.95rem;
+    min-width: auto;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-heading {
+    font-size: 1.6rem;
+  }
+
+  .client-subtext {
+    font-size: 0.95rem;
+  }
+
+  .pillar-box {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
 .clients-para {
   width: 100%;
   max-width: 1300px;

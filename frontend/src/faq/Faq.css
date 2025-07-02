@@ -9,22 +9,48 @@
 /* ---------- COMMON BANNER SECTION ---------- */
 .common-page-element {
   width: 100%;
-  height: 30rem;
-  overflow: hidden;
-  position: relative;
+  height: auto;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  display: flex;
+  justify-content: center;
 }
 
-.first-common-image {
+.faq-info-container {
+  max-width: 149rem;
   width: 100%;
-  height: 100%;
-  display: block;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.first-common-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.faq-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #007b8f;
+  font-weight: 600;
+}
+
+.faq-contact-details p {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-info-container {
+    padding: 1.5rem;
+  }
+
+  .faq-heading {
+    font-size: 1.5rem;
+  }
+
+  .faq-contact-details p {
+    font-size: 0.95rem;
+  }
 }
 
 /* Mobile fallback banner hidden by default */

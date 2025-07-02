@@ -15,7 +15,7 @@ function Blog() {
           </div>
 
           <div className="blog-card">
-            <img src="./images/supply2.avif" alt="Hard Water Softening" />
+            <img src="./images/treatment2.avif" alt="Hard Water Softening" />
             <h2>Why Water Softening is Important</h2>
             <p>Discover how hard water affects plumbing and appliances—and how softeners prevent costly damage.</p>
             <a href="#">Read More →</a>
